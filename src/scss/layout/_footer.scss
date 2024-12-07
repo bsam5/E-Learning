@@ -1,0 +1,100 @@
+footer {
+  background-color: $color-white;
+  .space {
+    padding-top: 100px;
+  }
+  .content {
+    @media (max-width: 991px) {
+      gap: 24px;
+    }
+  }
+  .contact-box {
+    svg {
+      vertical-align: middle;
+    }
+    .contact-items {
+      svg {
+        margin-right: 8px;
+      }
+    }
+    .icon-box {
+      margin-bottom: 30px;
+      background-color: $color-orange-50;
+      width: 54px;
+      height: 54px;
+      border-radius: 8px;
+    }
+  }
+
+  .lists {
+    .items-links {
+      color: $color-gray-35;
+      text-decoration: none;
+      transition: all 300ms linear;
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .sub-head {
+    font-weight: 600;
+    color: $color-gray-15 !important;
+    margin-bottom: 14px;
+  }
+  .social {
+    .icon-box {
+      background-color: $color-white-97;
+      border: 1px solid $color-white-95;
+      width: 52px;
+      height: 52px;
+      &:not(:last-child) {
+        margin-right: 14px;
+      }
+    }
+  }
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-white-95;
+    margin-block: 50px;
+  }
+  .copy-right {
+    padding-bottom: 30px;
+  }
+  @include breakpoints(xl) {
+    .space {
+      padding-top: 60px;
+    }
+    .line {
+      margin-block: 30px;
+    }
+    .copy-right {
+      padding-bottom: 20px;
+    }
+    .social {
+      .icon-box {
+        width: 44px;
+        height: 44px;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+  @include breakpoints(md) {
+    .space {
+      padding-top: 50px;
+    }
+    .line {
+      margin-block: 20px;
+    }
+    .copy-right {
+      padding-bottom: 24px;
+      margin: 0;
+    }
+  }
+}

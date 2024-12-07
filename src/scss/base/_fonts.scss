@@ -1,0 +1,8 @@
+$vietnam-font: "Be Vietnam Pro";
+
+// Proxima Nova
+@include font-face($vietnam-font, "../fonts/BeVietnamPro-Regular.ttf", 400);
+@include font-face($vietnam-font, "../fonts/BeVietnamPro-Medium.ttf", 500);
+@include font-face($vietnam-font, "../fonts/BeVietnamPro-SemiBold.ttf", 600);
+@include font-face($vietnam-font, "../fonts/BeVietnamPro-Bold.ttf", 700);
+@include font-face($vietnam-font, "../fonts/BeVietnamPro-ExtraBold.ttf", 800);

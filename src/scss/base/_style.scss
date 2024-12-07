@@ -1,0 +1,222 @@
+// Start Hero
+#hero {
+  text-align: center;
+  .head {
+    border-radius: 11px;
+    border: 1px solid $color-white-95;
+    padding: 14px 30px;
+    background-color: $color-white-99;
+    position: relative;
+    color: $color-gray-10;
+    .customize {
+      color: $color-orange-50;
+    }
+    .floating {
+      position: absolute;
+      top: -30px;
+      left: -24px;
+      svg {
+        display: block;
+      }
+    }
+  }
+  .sub-head {
+    margin-block: 20px 10px;
+  }
+
+  .icon-box {
+    background-color: $color-orange-95;
+    width: 62px;
+    height: 62px;
+    border-radius: 6px;
+  }
+  .btns {
+    margin-top: 60px;
+  }
+  .btn {
+    font-weight: 600;
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+  @include breakpoints(xl) {
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      svg {
+        width: 18px;
+        height: 21px;
+      }
+    }
+    .head {
+      font-size: 3.6rem;
+      line-height: 54px;
+    }
+  }
+  @include breakpoints(md) {
+    .head {
+      width: max-content;
+      margin: auto;
+      padding: 14px;
+      font-size: 1.6rem;
+      line-height: 24px;
+    }
+    .btns {
+      margin-top: 50px;
+    }
+  }
+}
+// End Hero
+// Start Links
+#links {
+  background-color: $color-white-99;
+  padding: 30px;
+  border: 1px solid $color-white-95;
+  border-radius: 12px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+
+  gap: 15px;
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+  .line {
+    display: block;
+    border-right: 1px solid $color-white-95;
+    height: 88px;
+  }
+  .link-items {
+    padding-block: 30px;
+    position: relative;
+
+    svg {
+      height: 28px;
+    }
+  }
+  .customize {
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include breakpoints(xl) {
+    padding: 24px;
+    .line {
+      height: 68px;
+    }
+    .link-items {
+      padding-block: 20px;
+    }
+  }
+  @include breakpoints(md) {
+    padding: 10px;
+    .line {
+      height: 64px;
+    }
+    .link-items {
+      padding-block: 18px;
+      svg {
+        height: 24px;
+      }
+    }
+  }
+}
+// End Links
+// Start video
+#video-box,
+#links {
+  &.space {
+    @include breakpoints(md) {
+      margin-top: 30px;
+    }
+  }
+}
+#video-box {
+  overflow: hidden;
+  video {
+    border-radius: 12px;
+    width: 100%;
+    height: 790px;
+    object-fit: cover;
+    @include breakpoints(xl) {
+      height: 649px;
+    }
+    @include breakpoints(md) {
+      height: 247px;
+    }
+  }
+}
+// End video
+// Start benefits
+#benefits {
+  color: $color-gray-15;
+  .text {
+    color: $color-gray-35;
+  }
+  @include breakpoints(md) {
+    .btn-white {
+      margin-top: 20px;
+    }
+  }
+}
+// End benefits
+
+// Start  Our Courses
+
+// Start Our Pricing
+#plans {
+  .header-plans {
+    margin-bottom: 80px;
+    @include breakpoints(xl) {
+      margin-bottom: 60px;
+    }
+    @include breakpoints(md) {
+      margin-bottom: 40px;
+    }
+  }
+  #btns-plans {
+    background-color: $color-white;
+    padding: 12px;
+    width: fit-content;
+    margin-left: auto;
+    .btn {
+      padding: 14px 30px;
+      font-weight: 500;
+      color: $color-gray-30;
+      &.active {
+        cursor: default;
+        background-color: $color-orange-50;
+        color: $color-white;
+        border: none;
+      }
+      @include breakpoints(xl) {
+        padding: 12px 24px;
+      }
+    }
+    @media (max-width: 992px) {
+      margin: auto;
+      margin-top: 20px;
+    }
+  }
+}
+// End Our Pricing
+// Start asked-questions
+#asked-questions {
+  padding: 100px;
+  background-color: $color-white;
+  border-radius: 12px;
+  .header-questions {
+    max-width: 408px;
+  }
+  .btn-questions {
+    border: 1px solid $color-white-95;
+  }
+  @include breakpoints(xl) {
+    padding: 80px;
+  }
+  @include breakpoints(md) {
+    padding: 24px;
+  }
+}
+
+// End asked-questions

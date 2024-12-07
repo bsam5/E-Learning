@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+li,
+ol,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+}
+
+body {
+  font-family: $vietnam-font, sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  background-color: $color-white-97;
+  color: $color-gray-15;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+.container {
+  width: 83%;
+  max-width: unset;
+  padding: 0;
+}
+.lists {
+  list-style: none;
+  padding: 0;
+}
+.space {
+  margin-top: 100px;
+}
+
+.head {
+  font-size: 4.8rem;
+  line-height: 72px;
+  font-weight: 600;
+}
+.head-section {
+  margin-bottom: 6px;
+}
+.head2 {
+  font-size: 3.8rem;
+  line-height: 57px;
+  font-weight: 500;
+}
+
+.sub-head {
+  font-size: 2rem;
+  line-height: 30px;
+  font-weight: 500;
+}
+.text,
+.sub-text {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 27px;
+}
+.text-num {
+  font-weight: 600;
+  font-size: 8rem;
+  line-height: 58.4px;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-box {
+  @extend .flex-center;
+  display: inline-flex;
+  border-radius: 8px;
+}
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+@include breakpoints(xl) {
+  .container {
+    width: 89%;
+  }
+  .space {
+    margin-top: 80px;
+  }
+  .head {
+    font-size: 3.8rem;
+    line-height: 57px;
+  }
+  .head-section {
+    margin-bottom: 4px;
+  }
+  .head2 {
+    font-size: 2.8rem;
+    line-height: 42px;
+  }
+  .sub-head {
+    font-size: 1.8rem;
+    line-height: 27px;
+  }
+  .text {
+    font-size: 1.6rem;
+    line-height: 24px;
+  }
+  .sub-text {
+    font-size: 1.4rem;
+    line-height: 21px;
+  }
+  .text-num {
+    font-size: 6rem;
+    line-height: 43.8px;
+  }
+}
+@include breakpoints(md) {
+  .container {
+    width: 100%;
+    padding-inline: 16px;
+  }
+  .space {
+    margin-top: 50px;
+  }
+  .head {
+    font-size: 2.8rem;
+    line-height: 42px;
+  }
+  .head2 {
+    font-size: 2.4rem;
+    line-height: 36px;
+  }
+  .sub-head {
+    font-size: 1.6rem;
+    line-height: 16px;
+  }
+  .text {
+    font-size: 1.4rem;
+    line-height: 21px;
+  }
+  .text-num {
+    font-size: 5rem;
+    line-height: 36.5px;
+  }
+}

@@ -1,0 +1,121 @@
+header {
+  .note {
+    margin: 30px;
+    margin-bottom: 20px;
+    background-color: $color-orange-50;
+    color: $color-white;
+    padding: 14px 16px;
+    border-radius: 8px;
+
+    .icon {
+      margin-left: 26px;
+    }
+  }
+  .icon-box {
+    margin: 0;
+    background-color: $color-orange-50;
+    width: 54px;
+    height: 54px;
+    border-radius: 8px;
+  }
+  .navbar-nav {
+    gap: 26px;
+  }
+  .container-fluid {
+    gap: 50px;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    color: $color-gray-15;
+    padding: 12px 20px;
+    &:hover {
+      background-color: $color-white-95;
+      border-radius: 6px;
+    }
+    &.active {
+      background-color: $color-white-95;
+      border-radius: 6px;
+    }
+  }
+  .btns {
+    gap: 26px;
+    color: $color-gray-15;
+    .btn {
+      padding: 14px 34px;
+    }
+    @include breakpoints(xl) {
+      .btn {
+        padding: 12px 24px;
+      }
+    }
+    @include breakpoints(lg) {
+      gap: 0px;
+      .btn {
+        padding: 12px 20px;
+      }
+    }
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+    border: none;
+  }
+  .btn-menu {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    direction: rtl;
+    .line-menu {
+      background-color: $color-gray-15;
+      height: 3px;
+      display: block;
+      width: 26px;
+      direction: rtl;
+      border-radius: 8px;
+      transition: width 300ms linear;
+      &:last-child {
+        width: 13px;
+      }
+    }
+    &:focus {
+      .line-menu {
+        width: 26px;
+      }
+    }
+  }
+  @include breakpoints(xl) {
+    .note {
+      margin: 20px;
+      margin-bottom: 16px;
+      padding-block: 10px;
+    }
+    .container-fluid {
+      gap: 20px;
+    }
+    .icon-box {
+      width: 44px;
+      height: 44px;
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+  @include breakpoints(lg) {
+    .btns {
+      flex: 1;
+      justify-content: flex-end;
+    }
+  }
+  @include breakpoints(md) {
+    .note {
+      margin: 16px;
+      .icon {
+        margin-left: 15px;
+        svg {
+          width: 12px;
+          height: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@mixin font-face($font-name, $font-path, $font-weights, $font-style: normal) {
+  @font-face {
+    font-family: "#{$font-name}";
+    src: unquote("url('#{$font-path}') format('truetype')");
+    font-weight: $font-weights;
+    font-style: $font-style;
+    font-display: swap;
+  }
+}
+
+@mixin breakpoints($point) {
+  @if $point == xl {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == xs {
+    @media (max-width: 520px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.btn-orange {
+  color: $color-white;
+  text-transform: capitalize;
+  background-color: $color-orange-50;
+  border-radius: 6px;
+  padding: 18px 24px;
+  overflow: hidden;
+  z-index: 1;
+  transition: filter 150ms ease;
+  border: none;
+  outline: none;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: $color-gray-15;
+    z-index: -1;
+    transition: all 1s;
+  }
+  &:hover {
+    color: $color-white;
+    background-color: $color-orange-50;
+    &::before {
+      width: 200%;
+    }
+  }
+  &:active {
+    background-color: $color-orange-50 !important;
+    color: $color-white !important;
+    filter: brightness(0.8);
+  }
+}
+
+//btn-white
+.btn-white {
+  @extend .btn-orange;
+  background-color: $color-white;
+  color: $color-gray-15;
+  &::before {
+    background-color: $color-gray-15;
+  }
+  &:hover {
+    background-color: $color-white !important;
+    color: $color-white;
+    &::before {
+      width: 200%;
+    }
+  }
+  &:active {
+    background-color: $color-white !important;
+    color: $color-white !important;
+    filter: brightness(0.8);
+  }
+}
+@include breakpoints(xl) {
+  .btn-orange {
+    padding: 14px 20px;
+  }
+}
