@@ -1,6 +1,14 @@
+// Import global CSS
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
-import "./css/main.css";
+import "./css/global.css";
+
+// Dynamically load page-specific CSS
+const currentPage = document.body.dataset.page;
+
+if (currentPage === "home") {
+  import("./css/home.css");
+}
 
 import { setupActiveBtn } from "./ActiveBtn.js";
 import { setupPlans } from "./setupPlans";

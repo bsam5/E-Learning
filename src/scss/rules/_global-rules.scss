@@ -127,7 +127,7 @@ svg {
     line-height: 43.8px;
   }
 }
-@include breakpoints(md) {
+@include breakpoints(lg) {
   .container {
     width: 100%;
     padding-inline: 16px;
