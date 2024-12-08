@@ -92,6 +92,11 @@ svg {
   display: inline-block;
   vertical-align: middle;
 }
+@include breakpoints(md) {
+  .btn-section {
+    margin-top: 20px;
+  }
+}
 @include breakpoints(xl) {
   .container {
     width: 89%;
